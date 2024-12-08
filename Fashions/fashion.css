@@ -1,0 +1,69 @@
+/* Heading */
+.heading {
+  color: white;
+  text-align: center;
+  font-weight: 900;
+  font-size: xx-large;
+  margin-top: 100px;
+}
+
+/* Container for Products */
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 35px;
+  justify-content: flex-start;
+  margin: 100px auto; /* Adjust as needed */
+}
+
+/* Product Card */
+.product-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  flex: 1 1 500px; /* Adjust to fit 3 columns */
+  max-width: 700px; /* Adjust to fit 3 columns */
+}
+
+.product-card:hover {
+  transform: translateX(-5px);
+  box-shadow: red;
+}
+
+.product-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 15px;
+  flex: 1; /* Ensures the info section expands to fill available space */
+}
+
+.product-info h4 {
+  font-size: larger;
+  margin-bottom: 0.5rem;
+}
+
+.product-info p {
+  font-size: large;
+  color: #4505d8;
+  margin-bottom: 10px;
+}
+
+.product-info button {
+  padding: 10px;
+  background: #ef9c66;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  font-size: 10px;
+  width: 100%;
+}
+
+.product-info button:hover {
+  background: linear-gradient(90deg,red, rgb(13, 13, 12));
+  cursor: pointer;
+}

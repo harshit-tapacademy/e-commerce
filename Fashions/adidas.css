@@ -1,0 +1,202 @@
+#ultraboost {
+  position: absolute;
+  top: 55%;
+  left: 10%;
+  font-weight: 700;
+}
+
+#shopbutton {
+  position: absolute;
+  top: 66%;
+  left: 13%;
+  padding: 10px;
+  font-weight: 700;
+  font-size: large;
+}
+
+.hero-section img:hover {
+  border: 5px solid whitesmoke;
+  border-radius: 5px;
+}
+
+/* Heading */
+.heading {
+  color: white;
+  text-align: center;
+  font-weight: 900;
+  font-size: xx-large;
+  margin-top: 100px;
+}
+
+/* Container for Products */
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 35px;
+  justify-content: flex-start;
+  margin: 100px auto; /* Adjust as needed */
+}
+
+/* Product Card */
+.product-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* overflow: hidden; */
+  transition: transform 0.3s;
+  flex: 1 1 200px; /* Adjust to fit 3 columns */
+  max-width: 300px; /* Adjust to fit 3 columns */
+}
+
+.product-card:hover {
+  transform: translateY(-20px);
+  border: 10px solid rgb(238, 200, 10);
+}
+
+.product-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 15px;
+  flex: 1; /* Ensures the info section expands to fill available space */
+}
+
+.product-info h4 {
+  font-size: 13px;
+}
+
+.product-info p {
+  font-size: 20;
+  color: #4505d8;
+  margin-bottom: 10px;
+}
+
+.product-info button {
+  padding: 10px;
+  background: #ec650b;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 9px;
+  font-size: 10px;
+  width: 100%;
+  font-weight: 600;
+}
+
+.product-info button:hover {
+  background: rgb(11, 230, 201);
+}
+
+#shoe1:hover {
+  content: url(/images/fashion/adidaspage/adidas_shoe1-2.avif);
+}
+#shoe2:hover {
+  content: url(/images/fashion/adidaspage/adidas_shoe2-2.avif);
+}
+#shoe3:hover {
+  content: url(/images/fashion/adidaspage/adidas_shoe3-2.avif);
+}
+#short1:hover {
+  content: url(/images/fashion/adidaspage/adidas_short1-2.avif);
+}
+#tshirt1:hover {
+  content: url(/images/fashion/adidaspage/adidas_tshirt1-2.avif);
+}
+#tshirt2:hover {
+  content: url(/images/fashion/adidaspage/adidas_tshirt2-2.avif);
+}
+
+.heading {
+  color: white;
+  text-align: center;
+  font-weight: 900;
+  font-size: xx-large;
+  margin-top: 80px;
+}
+
+/* Container for the filter and products sections */
+.main2 {
+  display: flex;
+  position: relative;
+}
+
+/* Filter section initially hidden */
+.filter-section {
+  width: 250px;
+  background-color: #f7f7f7;
+  padding: 15px;
+  position: absolute;
+  top: 0;
+  left: -250px; /* Positioned off-screen initially */
+  height: 100vh;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: left 0.3s ease; /* Smooth transition when sliding in */
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+/* Align and style the filter section content */
+.filter-section h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.filter-section input[type="radio"],
+.filter-section input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.filter-section label {
+  margin-right: 20px;
+  font-size: 14px;
+}
+
+/* Checkbox that controls the visibility of the filter section */
+.filter-checkbox {
+  display: none;
+}
+
+/* Label for the filter toggle (acts as a button) */
+.filter-toggle {
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  z-index: 1000; /* Ensure the button is on top */
+}
+
+.filter-toggle img {
+  width: 20px;
+  height: 20px;
+}
+
+/* When the checkbox is checked, slide in the filter section */
+.filter-checkbox:checked ~ .filter-section {
+  left: 0; /* Move the filter section into view */
+}
+
+/* Products section styling */
+.products {
+  flex-grow: 1;
+  padding-left: 20px; /* Space between filters and products */
+  transition: margin-left 0.3s ease;
+}
+
+/* Ensure no movement of products section when filter is shown */
+.main2 .products {
+  margin-left: 0;
+}
+
+/* Adjust products section margin when filter is hidden */
+.filter-checkbox:checked ~ .products {
+  margin-left: 250px;
+}
+
